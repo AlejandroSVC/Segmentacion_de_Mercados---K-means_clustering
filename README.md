@@ -102,15 +102,12 @@ variable  discriminant_weight
 
 Group Means (Top 4 Discriminant Variables):
 
-         AcceptedCmp1  NumStorePurchases  MntMeatProducts  AcceptedCmp2
-cluster  
+cluster AcceptedCmp1  NumStorePurchases  MntMeatProducts  AcceptedCmp2
 
+0            0.000           3.111        27.444      0.000
 
-0            0.000000           3.111111        27.444444      0.000000
+1            0.000           9.182       413.045      0.000
 
+2            0.000           7.407       149.037      0.000
 
-1            0.000000           9.181818       413.045455      0.000000
-
-2            0.000000           7.407407       149.037037      0.000000
-
-3            0.833333           9.500000       577.500000      0.333333
+3            0.833           9.500       577.500      0.333
