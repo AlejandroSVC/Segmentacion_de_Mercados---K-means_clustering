@@ -76,61 +76,29 @@ Eigenvalues (explained variance ratio) for each discriminant function:
 
 [0.69828274 0.211259   0.09045826]
 
-Most Discriminant Variables (ranked):
+Ten Most Discriminant Variables (ranked):
 
-               variable  discriminant_weight
+variable  discriminant_weight
 
-19         AcceptedCmp1             4.142822
+19. AcceptedCmp1: 4.142822
 
-14    NumStorePurchases             3.630316
+14. NumStorePurchases: 3.630316
 
-7       MntMeatProducts             3.251910
+7. MntMeatProducts: 3.251910
 
-20         AcceptedCmp2             2.236848
+20. AcceptedCmp2: 2.236848
 
-0            Year_Birth             1.699472
+0. Year_Birth:  1.699472
 
-18         AcceptedCmp5             1.295870
+18. AcceptedCmp5: 1.295870
 
-8       MntFishProducts             0.985022
+8. MntFishProducts: 0.985022
 
-17         AcceptedCmp4             0.918370
+17. AcceptedCmp4: 0.918370
 
-12      NumWebPurchases             0.901000
+12. NumWebPurchases: 0.901000
 
-2               Kidhome             0.880786
-
-23            Education             0.842022
-
-9      MntSweetProducts             0.794615
-
-11    NumDealsPurchases             0.781862
-
-3              Teenhome             0.672801
-
-6             MntFruits             0.639859
-
-10         MntGoldProds             0.594816
-
-5              MntWines             0.537330
-
-13  NumCatalogPurchases             0.521420
-
-21             Complain             0.451678
-
-22             Response             0.363133
-
-4               Recency             0.342258
-
-16         AcceptedCmp3             0.218802
-
-1                Income             0.217031
-
-24       Marital_status             0.174198
-
-15    NumWebVisitsMonth             0.150015
-
-
+2. Kidhome: 0.880786
 
 Group Means (Top 4 Discriminant Variables):
 
