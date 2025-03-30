@@ -104,10 +104,10 @@ Group Means (Top 4 Discriminant Variables):
 
 cluster AcceptedCmp1  NumStorePurchases  MntMeatProducts  AcceptedCmp2
 
-0            0.000           3.111        27.444      0.000
+0            0.00           3.11        27.44      0.00
 
-1            0.000           9.182       413.045      0.000
+1            0.00           9.18       413.05      0.00
 
-2            0.000           7.407       149.037      0.000
+2            0.00           7.41       149.04      0.00
 
-3            0.833           9.500       577.500      0.333
+3            0.83           9.50       577.50      0.33
