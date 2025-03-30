@@ -1,4 +1,4 @@
-# Market segmentation
+# Market Segmentation
 ## Using k-means cluster analysis and discriminant analysis with Python
 
 ![Customer_segmentation](docs/assets/images/Customer_segmentation.jpg)
