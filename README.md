@@ -1,9 +1,11 @@
-# Market Segmentation
-## Using k-means cluster analysis and discriminant analysis with Python
+# Segmentación del mercado
+## Uso del Análisis de Conglomerados de k-Medias y Análisis Discriminante
+
+## Python
 
 ![Customer_segmentation](docs/assets/images/Customer_segmentation.jpg)
 
-### Libraries
+### Importar bibliotecas
 ```
 import numpy as np
 import pandas as pd
@@ -12,63 +14,63 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import silhouette_score
 ```
-### Load data
+### Cargar los datos
 ```
 import os
 os.chdir('C:/Users/Alejandro/Documents/')
 data = pd.read_csv('Customer_segmentation.csv')
 data.info()
 ```
-### Standardize data (important for K-Means)
+### Estandarizar los datos (importante para K-Means)
 ```
 scaler = StandardScaler()
 scaled_data = scaler.fit_transform(data)
 ```
-### K-Means Clustering (optimize n_clusters if needed)
+### Agrupamiento de K-Medias (optimice n_clusters si es necesario)
 ```
-n_clusters = 4  # Adjust based on elbow method or silhouette score
+n_clusters = 4             # Ajuste según el método del codo o la puntuación de silueta
 kmeans = KMeans(n_clusters=n_clusters, random_state=42)
 clusters = kmeans.fit_predict(scaled_data)
 ```
-### Add cluster labels to original data
+### Agregar etiquetas de clúster a los datos originales
 ```
 data['cluster'] = clusters
 ```
-### Evaluate clustering quality
+### Evaluar la calidad de la agrupación
 ```
 silhouette_avg = silhouette_score(scaled_data, clusters)
 print(f"Silhouette Score (clustering quality): {silhouette_avg:.2f}")
 ```
-### Discriminant Analysis (LDA) to rank variables
+### Análisis discriminante (LDA) para clasificar variables
 ```
 lda = LinearDiscriminantAnalysis()
 lda.fit(scaled_data, clusters)
 ```
-### Print discriminant analysis statistics
+### Mostrar las estadísticas del Análisis Discriminante
 ```
 print("=== DISCRIMINANT ANALYSIS RESULTS ===")
 print("\nEigenvalues (explained variance ratio) for each discriminant function:")
 print(lda.explained_variance_ratio_)
 ```
-### Extract & rank discriminant variables
+### Extraer y clasificar variables discriminantes
 ```
 discriminant_power = pd.DataFrame({
     'variable': data.columns[:-1],  # Exclude 'cluster' column
-    'discriminant_weight': np.abs(lda.coef_[0])  # Magnitude of LDA coefficients
+    'discriminant_weight': np.abs(lda.coef_[0])  # Magnitud de los coefficients LDA
 }).sort_values('discriminant_weight', ascending=False)
 
 print("\nMost Discriminant Variables (ranked):")
 print(discriminant_power)
 ```
-### Compute group means for top 4 discriminant variables
+### Calcular medias de grupo para las 4 principales variables discriminantes
 ```
-top_4_vars = discriminant_power['variable'].head(4).tolist()
+top_4_vars  = discriminant_power['variable'].head(4).tolist()
 group_means = data.groupby('cluster')[top_4_vars].mean()
 
-print("\nGroup Means (Top 4 Discriminant Variables):")
+print("\nGroup Means (Principales 4 Variables Discriminantes):")
 print(group_means)
 ```
-OUTPUT
+## RESULTADO:
 
 === DISCRIMINANT ANALYSIS RESULTS ===
 
