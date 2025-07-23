@@ -1,5 +1,5 @@
 # Segmentación del mercado
-## Uso del Análisis de Conglomerados de k-Medias y Análisis Discriminante
+## Uso del Análisis de Conglomerados de k-Medias y del Análisis Discriminante
 
 ## Python
 
